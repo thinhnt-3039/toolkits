@@ -182,16 +182,15 @@ for line in sys.stdin:
 current_piece, my_board = parse_input(input_str)
 my_board = convert1to0(my_board)
 placeables = find_placeable_slots(my_board)
-# if (current_piece[1] == current_piece[0] or current_piece[1] == current_piece[0]) and (set([0, 1, 2, 3]).issubset(set(placeables))) and current_piece[1] == 7:
-#     output = random.choice([1, 2, 3])
-# elif (current_piece[1] == current_piece[0] or current_piece[1] == current_piece[0]) and (set([5, 6, 7, 8]).issubset(set(placeables))) and current_piece[1] == 8:
-#     output = random.choice([5, 6, 7])
-# elif (current_piece[1] == current_piece[0] or current_piece[1] == current_piece[0]) and (set([18, 19, 20, 21]).issubset(set(placeables))) and current_piece[1] == 9:
-#     output = random.choice([19, 20, 21])
-# elif (current_piece[1] == current_piece[0] or current_piece[1] == current_piece[0]) and (set([23, 24, 25, 26]).issubset(set(placeables))) and current_piece[1] == 10:
-#     output = random.choice([23, 24, 25])
-# else:
-if sum(my_board) == 0:
+if (current_piece[1] == current_piece[0] or current_piece[1] == current_piece[0]) and (set([0, 1, 2, 3]).issubset(set(placeables))) and current_piece[1] == 7:
+    output = random.choice([1, 2, 3])
+elif (current_piece[1] == current_piece[0] or current_piece[1] == current_piece[0]) and (set([5, 6, 7, 8]).issubset(set(placeables))) and current_piece[1] == 8:
+    output = random.choice([5, 6, 7])
+elif (current_piece[1] == current_piece[0] or current_piece[1] == current_piece[0]) and (set([18, 19, 20, 21]).issubset(set(placeables))) and current_piece[1] == 9:
+    output = random.choice([19, 20, 21])
+elif (current_piece[1] == current_piece[0] or current_piece[1] == current_piece[0]) and (set([23, 24, 25, 26]).issubset(set(placeables))) and current_piece[1] == 10:
+    output = random.choice([23, 24, 25])
+elif sum(my_board) == 0:
     if current_piece[0] == current_piece[1]:
         output = random.choice([12,13,14])
         # output = random.choice([11,12,13,14,15,20,21,22,23,24]) 
